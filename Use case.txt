@@ -1,0 +1,10 @@
+@startuml
+actor Student
+Student .> (sendCommand)
+Robot .> (forward)
+Robot ..> (left)
+Robot ...> (right)
+Robot ....> (stop)
+actor Camera
+Camera .> (getPosition)
+@enduml
