@@ -1,0 +1,17 @@
+@startuml
+state "Двжение" as Running
+state "Ожидание" as Waiting
+state "Движение вперед" as MoveForward
+state "Поворот" as Rotate
+state "Наполение стакана" as PourDrink
+[*] --> Waiting: включение робота
+Waiting --> [*]: выключение робота
+Waiting --> Running: получение команды
+Running --> Waiting: команда выполнена
+Running ---> MoveForward: расстояние больше дельта
+Running ---> Rotate: угол больше дельта
+Running ---> PourDrink: робот доехал
+PourDrink ---> Running: робот доставляет
+Rotate --> Running
+MoveForward --> Running
+@enduml
