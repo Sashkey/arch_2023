@@ -1,4 +1,3 @@
-#include <memory>
 #include "det.h"
 #include "dispenser.h"
 #include "robot.h"

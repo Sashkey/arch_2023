@@ -8,6 +8,7 @@ add_executable(main
     "main.cpp"
     "det.cpp"
     "robot.cpp"
-    "dispenser.cpp")
+    "dispenser.cpp"
+    "control.cpp")
 
 target_link_libraries( main ${OpenCV_LIBS} )
